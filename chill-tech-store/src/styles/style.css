@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #0ff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #0ff;
+    box-shadow: 0 0 10px #0ff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.navbar-links a {
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Container */
+.neon-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Title */
+.neon-title {
+    font-size: 2rem;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Buttons */
+.neon-button {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.neon-button:hover {
+    background: #0ff;
+    color: #000;
+}
+
+/* Inputs & Selects */
+input,
+select {
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #0ff;
+    background: #111;
+    color: #0ff;
+    border-radius: 4px;
+}
+
+/* Game Catalog Grid */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.game-card {
+    cursor: pointer;
+    background: #111;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid #0ff;
+    transition: transform 0.2s ease;
+
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.game-card p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* History / Riwayat */
+.history-list {
+    list-style: none;
+    padding: 0;
+}
+
+.history-list li {
+    background: #111;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #0ff;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: left;
+    color: #0ff;
+}
+
+/* Form Sections */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: top;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 2px solid #0ff;
+    border-radius: 12px;
+    background-color: #111;
+    box-shadow: 0 0 15px #0ff;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .neon-title {
+        font-size: 1.5rem;
+    }
+}
+
+.game-card.selected {
+    background: #0ff;
+    color: #000;
+    border-color: #fff;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background: #111;
+    color: #0ff;
+    border: 1px solid #0ff;
+    border-radius: 4px;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+}
